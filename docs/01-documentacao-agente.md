@@ -75,15 +75,15 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [Utilização de uma base de conhecimento com dados estruturados para orientar as recomendações.]
-- [ ] [Priorização de respostas coerentes com as informações disponíveis nos arquivos CSV.]
-- [ ] [Consideração das necessidades e preferências informadas pelo usuário durante a conversa.]
-- [ ] [Utilização de prompts documentados para orientar o comportamento e as respostas do agente.]
+- [X] [Utilização de uma base de conhecimento com dados estruturados para orientar as recomendações.]
+- [X] [Priorização de respostas coerentes com as informações disponíveis nos arquivos CSV.]
+- [X] [Consideração das necessidades e preferências informadas pelo usuário durante a conversa.]
+- [X] [Utilização de prompts documentados para orientar o comportamento e as respostas do agente.]
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+
 - Suas recomendações dependem das informações disponíveis na base de conhecimento fornecida pelo projeto.
 - Os dados utilizados são mockados e podem não representar informações atualizadas sobre os estabelecimentos e atrações.
 - Não deve inventar informações sobre locais, serviços ou atrações que não estejam disponíveis em sua base de conhecimento.
