@@ -1,31 +1,21 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# SSP - Simplificando São Paulo | Guia turistico de IA para conhecer SP
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+Em 2025 São Paulo bateu record em turistas na cidade, com isso existe a oportunidade de criar ferramentas que possam auxiliar essas pessoas em conhecer São Paulo. Como a cidade é a maior da america latina, um guia simples muitas vezes não atende nossas necessidades, sendo assim criei esse assistente de IA focado em guiar pessoa pela cidade de forma mais interativa.
 
 ---
 
-## O Que Você Deve Entregar
-
 ### 1. Documentação do Agente
 
-Defina **o que** seu agente faz e **como** ele funciona:
+# O que o agente faz?
+> O agente tenta entender as necessidades e vontades do usuário poder recomendar locais com base nos requisitos oferecidos pelo usuário.
+# Persona e Tom de Voz
+> Ele tenta se comunicar de forma amigavel, informal e paciente, sempre tentando entender o usuário e oferencendo recomendações como um amigo.
+# Arquitetura e Segurança 
+> estão no arquivo de documentação em `docs`
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+📄 **documentação:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ---
 
@@ -35,36 +25,22 @@ Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alim
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `pontosTuristicos.csv` | CSV | principais cartões postais de SP |
+| `restaurantes.csv` | CSV | Restaurantes, bares, food trucks. Locais onde é possivel comer algo durante os passeios|
+| `entreterimento.csv` | CSV | Locais de entreterimento como cinemas, parques e cultura |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
 
 ### 3. Prompts do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+>Os promps estão no arquivo de `prompts` em `docs`
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+📄 **Prompts:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 
 ---
 
 ### 4. Aplicação Funcional
 
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+Aqui está a aplicação em sua forma MVP
 
 📁 **Pasta:** [`src/`](./src/)
 
@@ -74,22 +50,19 @@ Desenvolva um **protótipo funcional** do seu agente:
 
 Descreva como você avalia a qualidade do seu agente:
 
-**Métricas Sugeridas:**
+**Métricas Usadas:**
 - Precisão/assertividade das respostas
 - Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+- Coerência com as solucitações do cliente
+- Detalhamento das respostas e coerencia com os dados apresentados
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+📄 **Metricas:** [`docs/04-metricas.md`](./docs/04-metricas.md)
 
 ---
 
 ### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+Aqui está um breve vídeo explicando o agente.
 
 📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
 
@@ -101,8 +74,8 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 
 | Categoria | Ferramentas |
 |-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
+| **LLMs** | [Ollama](https://ollama.ai/) |
+| **Desenvolvimento** |[Google Colab](https://colab.research.google.com/) |
 | **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
 | **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
 
@@ -139,11 +112,3 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 ```
 
 ---
-
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
