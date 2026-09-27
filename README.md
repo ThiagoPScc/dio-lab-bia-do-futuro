@@ -76,8 +76,8 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 |-----------|-------------|
 | **LLMs** | [Ollama](https://ollama.ai/) |
 | **Desenvolvimento** |[Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+| **Orquestração** | FastAPI |
+| **Diagramas** | [Mermaid](https://mermaid.js.org/ |
 
 ---
 
